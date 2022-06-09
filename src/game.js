@@ -4,7 +4,8 @@ class Game {
      this.winCount = playerInfo.winCount;
      this.gameType = gameType;
     }
-       
+
+
 };
 
 
