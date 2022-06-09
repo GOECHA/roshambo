@@ -1,8 +1,9 @@
 class Game {
     constructor(playerInfo){
      this.player = playerInfo.player;
-     this.winCount = playerInfo.winCount;
+     this.winGame = playerInfo.winGame;
      this.gameType = gameType;
+     this.result = result;
     }
 
 
