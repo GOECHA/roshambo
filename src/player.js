@@ -1,17 +1,12 @@
 class Player {
-    constructor(){
+    constructor(name){
      this.name = name;
      this.token = token;
-     this.win = true;
+     this.wins = wins || 0;
+     this.id = Date.now();
     }
     takeTurn(){
-    var 🛸 = this.token
-     if (this.win === true){
-       return this.token 
-    } else {
-        return this.token
-    }
-    console.log(this.token)
+    
  };
 
 
