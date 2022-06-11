@@ -6,26 +6,26 @@
     <link rel="stylesheet" href="styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛸 Ancient Alien</title>
+    <title>🛸 Ancient Alien 
+    </title>
 </head>
 <body>  
     <main>
       <section class="main-container">    
-        <section class="left-side"> 
+        <section class="left-side "> 
           <article class="side-boxes" id="leftTop">
-             <div class="character" id="humanChar"></div>
-             <div class="charcter-name">HUMAN</div>
-             <div class="win-count" id="humanWin">Wins: 0</div>
+            <img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">
+             <div class="character-name">HUMAN</div>
+             <p class="win-count" id="humanWin">Wins: 0</p>
           </article>
           <article class="side-boxes" id="leftMid">
-            <button class="change-game-btn hidden">Change Game</button>
+            <button class="change-game-btn">Change Game</button>
           </article>
-          <article class="side-boxes" id="leftBtm"></article>
         </section>
       <section class="center-container">
           <article class="mid-boxes" id="midTop">
              <h1>ANCIENT ALIEN</h1>
-             <h2>ROSHAMBO</p>     
+             <h2>ROSHAMBO</h2>     
           </article>
           <article class="mid-boxes" id="midMid"> 
             <div class="game-container" id="classicGame">
@@ -36,6 +36,12 @@
                 <p class="p2">Space Ship > Human</p>
               </div>
              </div>
+             <img class="abduction hidden" src="./assets/SVG/abduction.svg">
+             <img class="classic-image hidden" id="space-ship" src="./assets/SVG/space-ship.svg">
+             <img class="classic-image hidden" id="human" src="./assets/SVG/human.svg">
+             <img class="classic-image hidden" id="alien-head" src="./assets/SVG/alien-head.svg">
+             <img class="difficult-image hidden" id="robot" src="./assets/SVG/robot.svg">
+             <img class="difficult-image hidden"id="sphynx" src="./assets/SVG/sphynx.svg">
             </article> 
             <article class="mid-boxes" id="midBtm">
               <div class="game-container" id="difficultGame">
@@ -49,17 +55,16 @@
                 </div>
               </div>
              </article>
-             <article class="mid-boxes" id="midFoot">
-             <article>
+             <article class="mid-boxes" id="midFoot"></article>
+            
             </section>
             <section class="right-side"> 
              <article class="side-boxes" id="rightTop">
-                <div class="character" id="computerChar">image</div>
-                <div class="charcter-name">COMPUTER</div>
-                <div class="win-count" id="computerWin">Wins: 0</div>
+              <img class="player-image" id="computer" src="./assets/SVG/computer.svg">
+                <div class="character-name">COMPUTER</div>     
+                <p class="win-count" id="computerWin">Wins: 0</p>
             </article>
             <article class="side-boxes" id="rightMid"></article>
-            <article class="side-boxes" id="rightBtm"></article>
             </section>          
         </section>
      </main>
