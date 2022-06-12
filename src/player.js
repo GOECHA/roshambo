@@ -5,34 +5,32 @@ class Player {
      this.token = token;
      this.wins = 0;
      this.turn = null;
-     this.warriors = [];
       //  this.id = Date.now();
-    }
-
+      
+    };
+    
     takeTurn(warrior){
       this.turn = warrior;
+      
     };
 
-   classicGame(classic){
-      var classic = [`Alien`, `Human`, `Space Ship`]
-      this.warriors.push(classic);
+   chooseGame(gameType){
+      console.log(warriors.length)
+       if (gameType === `classic`){
+        var warriors = [`Alien`, `Human`, `Space Ship`]
+     } else {
+        var warriors = [`Alien`, `Human`, `Space Ship`, `Sphinx`, `Robot`]
+     }
+        this.turn = warriors[Math.floor(Math.random() * this.warriors.length)];
+         
     };
 
-    difficultGame(difficult){
-      var difficult = [`Alien`, `Human`, `Space Ship`, `Sphinx`, `Robot`]
-      this.warriors.push(difficult);
-    }; 
-
-   playGame(){         
-    var warriors = this.warriors
-    this.turn = warriors[Math.floor(Math.random() * this.warriors.length)];
-    };
 };
 
-
+console.log(`hello`)
 
 //  token = {
-//    var player1: <img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">,
+//    var player1: ,
 //      computer: <img class="player-image" id="computer" src="./assets/SVG/computer.svg"> ,
 //  }
 

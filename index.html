@@ -11,7 +11,7 @@
 <body>  
     <main>
       <section class="main-container">    
-        <section class="left-side"> 
+        <aside class="left-side"> 
           <article class="side-boxes" id="leftTop">
             <img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">
             <div class="character-name">HUMAN</div>
@@ -20,8 +20,8 @@
           <article class="side-boxes" id="leftMid">
             <button class="change-game-btn hidden">Change Game</button>
           </article>
-        </section>
-      <section class="center-container">
+        </aside>
+        <section class="center-container">
           <article class="mid-boxes" id="midTop">
              <h1>ANCIENT ALIEN</h1>
              <h2>ROSHAMBO</h2>     
@@ -41,31 +41,30 @@
              <img class="classic-image hidden" id="alien-head" src="./assets/SVG/alien-head.svg">
              <img class="difficult-image hidden" id="robot" src="./assets/SVG/robot.svg">
              <img class="difficult-image hidden"id="sphynx" src="./assets/SVG/sphynx.svg">
-            </article> 
-            <article class="mid-boxes" id="midBtm">
-              <div class="game-container" id="difficultGame">
-               <p class="game-title" id="diffTitle">Difficult</p>     
-                <div class="game-description" id="diffDescrip">
-                  <p class="p2">Alien > Space Ship & Sphinx</p>
-                  <p class="p2">Human > Alien & Robot</p>
-                  <p class="p2">Space Ship > Human & Sphinx</p>
-                  <p class="p2">Sphinx > Alien & Human</p>
-                  <p class="p2">Robot > Human & Alien</p>
-                </div>
+          <!-- </article>  -->
+          <!-- <article class="mid-boxes" id="midBtm"> -->
+            <div class="game-container" id="difficultGame">
+              <p class="game-title" id="diffTitle">Difficult</p>     
+              <div class="game-description" id="diffDescrip">
+                <p class="p2">Alien > Space Ship & Sphinx</p>
+                <p class="p2">Human > Alien & Robot</p>
+                <p class="p2">Space Ship > Human & Sphinx</p>
+                <p class="p2">Sphinx > Alien & Human</p>
+                <p class="p2">Robot > Human & Alien</p>
               </div>
-             
-             </article>
-             <article class="mid-boxes" id="midFoot"></article>
-            </section>
-            <section class="right-side"> 
-             <article class="side-boxes" id="rightTop">
-              <img class="player-image" id="computer" src="./assets/SVG/computer.svg">
-              <div class="character-name">COMPUTER</div>     
-              <p class="win-count" id="computerWin">Wins: 0</p>
-            </article>
-            <article class="side-boxes" id="rightMid"></article>
-            </section>          
+            </div>    
+          <!-- </article> -->
+          <article class="mid-boxes" id="midFoot"></article>
         </section>
+          <section class="right-side"> 
+            <article class="side-boxes" id="rightTop">
+            <img class="player-image" id="computer" src="./assets/SVG/computer.svg">
+            <div class="character-name">COMPUTER</div>     
+            <p class="win-count" id="computerWin">Wins: 0</p>
+          </article>
+          <article class="side-boxes" id="rightMid"></article>
+          </section>          
+      </section>
      </main>
      <script type="text/javascript" src="./src/main.js"></script>
      <script type="text/javascript" src="./src/game.js"></script>
