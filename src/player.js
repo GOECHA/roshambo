@@ -4,7 +4,7 @@ class Player {
      this.name = name;
      this.token = token;
      this.wins = 0;
-     this.turn = null;
+     this.turn = ``;
       //  this.id = Date.now();
       
     };
@@ -15,13 +15,15 @@ class Player {
     };
 
    chooseGame(gameType){
-      console.log(warriors.length)
-       if (gameType === `classic`){
-        var warriors = [`Alien`, `Human`, `Space Ship`]
+      // console.log(warriors, 1)
+       if (gameType === 'classic'){
+        var warriors = ['alien', 'human', 'space-ship']
+        this.turn = warriors[Math.floor(Math.random() * warriors.length)];   
      } else {
-        var warriors = [`Alien`, `Human`, `Space Ship`, `Sphinx`, `Robot`]
+        var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot']
+        this.turn = warriors[Math.floor(Math.random() * warriors.length)];
      }
-        this.turn = warriors[Math.floor(Math.random() * this.warriors.length)];
+        
          
     };
 
@@ -39,6 +41,8 @@ console.log(`hello`)
 
 
 // What I need to do: I need to choose a game classic or difficult
+// start with classic
+// weave in difficult later
 // Then the players appear on the next screen
 // each player has a score- "wins:" Default to 0
 // Player must choose a 'warrior'

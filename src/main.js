@@ -1,50 +1,59 @@
 
 
 // // ~~~~~~~~~~~~~~~~Global Variables~~~~~~~~~~~~~~//
+  newGame;
 
-
-//   var cenContainer = document.querySelectorAll(".mid-boxes")
-//   var gameContainer = document.querySelectorAll(".game-container")
+//   var resultContainer = document.querySelectorAll(".result-container")
+//   var cenContainer = document.querySelectorAll(".centerContainer");
+//   var gameContainer = document.querySelectorAll(".game-container");
 //   // var classic = document.querySelector("#classicGame")
 //   // var difficult = document.querySelector("#difficultGame")
-//   // var changeGmBtn = document.querySelector(".change-game-btn")
-//   var classicImg = document.querySelectorAll(".classic-image")
-//   var difficultImg = document.querySelectorAll(".difficult-image")
-//   var classic = document.querySelector("#classicGame")
-//   var difficult = document.querySelector("#difficultGame")
+//   var changeGmBtn = document.querySelector(".change-game-btn");
+//   var classicImg = document.querySelectorAll(".classic-image");
+//   var difficultImg = document.querySelectorAll(".difficult-image");
+//   var classic = document.querySelector("#classicGame");
+//   var difficult = document.querySelector("#difficultGame");
+  
 
 
-
-//   // var newGame = new Game(); 
+// //   var newGame = new Game(); 
 
 // // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
-
-//   cenContainer.addEventListener('click', chooseGame)
-//   changeGmBtn.addEventListener('click', backToHome)
-
+ 
+//   gameContainer.addEventListener('click', chooseGame);
+//   changeGmBtn.addEventListener('click', backToHome);
+  window.addEventListener('load', newGame) 
 
 // // ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
+
+
+  function newGame(){
+    newGame = new Game();
+  }
+
+
 
 //   function chooseGame(event){
 //     if (event.target.id === "classicGame") {
 //       hide(gameContainer);
 //       show(changeGmBtn);
-//       show(classicImg);
+//       show(resultContainer);
 //    } else if (event.target.id === "difficultGame") {
 //        hide(gameContainer);
 //        show(changeGmBtn);
-//        show(classicImg);
-//        show(difficultImg);
+//        show(resultContainer);
 //     } 
 //   };
 
 
+
+
 //     function backToHome(){
 //       hide(changeGmBtn);
-//       show(gameContainer);
+//       show(gameContainerBtn);
 //       hide(classicImg);
 //       hide(difficultImg);
-//     }
+//     };
 
     
 //     // var id = id.event.target
@@ -61,7 +70,7 @@
 //   element.classList.add('hidden')
 // };
 
-
+// console.log(`hello`)
 // // function genCharacters() {
 // //     var characters = "";
 // //     var combos = 
