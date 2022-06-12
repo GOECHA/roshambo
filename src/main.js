@@ -3,13 +3,15 @@
 // // ~~~~~~~~~~~~~~~~Global Variables~~~~~~~~~~~~~~//
 
 
-//   var playerImg
-//   var midContainer = document.querySelectorAll(".mid-boxes")
+//   var cenContainer = document.querySelectorAll(".mid-boxes")
+//   var gameContainer = document.querySelectorAll(".game-container")
 //   // var classic = document.querySelector("#classicGame")
 //   // var difficult = document.querySelector("#difficultGame")
 //   // var changeGmBtn = document.querySelector(".change-game-btn")
 //   var classicImg = document.querySelectorAll(".classic-image")
 //   var difficultImg = document.querySelectorAll(".difficult-image")
+//   var classic = document.querySelector("#classicGame")
+//   var difficult = document.querySelector("#difficultGame")
 
 
 
@@ -17,22 +19,18 @@
 
 // // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
 
-
-
-//   midContainer.addEventListener('click', chooseGame)
+//   cenContainer.addEventListener('click', chooseGame)
 //   changeGmBtn.addEventListener('click', backToHome)
 
 
 // // ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
 
-//   function chooseGame(){
-//     var classic = document.querySelector("#classicGame")
-//     var difficult = document.querySelector("#difficultGame")
-//     if (classic) {
+//   function chooseGame(event){
+//     if (event.target.id === "classicGame") {
 //       hide(gameContainer);
 //       show(changeGmBtn);
 //       show(classicImg);
-//    } if (difficult) {
+//    } else if (event.target.id === "difficultGame") {
 //        hide(gameContainer);
 //        show(changeGmBtn);
 //        show(classicImg);
@@ -42,16 +40,17 @@
 
 
 //     function backToHome(){
+//       hide(changeGmBtn);
 //       show(gameContainer);
 //       hide(classicImg);
 //       hide(difficultImg);
-//       hide(changeGmBtn);
-
 //     }
 
-  
-
+    
+//     // var id = id.event.target
 // // ~~~~~~~~~~~~~~~~~Utility Functions~~~~~~~~~~~~~~//
+
+
 
 
 // function show(element) {
