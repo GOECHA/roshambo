@@ -1,59 +1,59 @@
-// ~~~~~~~~~~~~~~~~Global Variables~~~~~~~~~~~~~~//
-var game = document.Document.getElementsByClassName()(".game-container")
-var classic = document.querySelector("#classicGame")
-var difficult = document.querySelector("#difficultGame")
-var changeGmBtn = document.Document.getElementsByClassName()(".change-game-btn")
+
+
+// // ~~~~~~~~~~~~~~~~Global Variables~~~~~~~~~~~~~~//
+
+
+//   var playerImg
+//   var midContainer = document.querySelectorAll(".mid-boxes")
+//   // var classic = document.querySelector("#classicGame")
+//   // var difficult = document.querySelector("#difficultGame")
+//   // var changeGmBtn = document.querySelector(".change-game-btn")
+//   var classicImg = document.querySelectorAll(".classic-image")
+//   var difficultImg = document.querySelectorAll(".difficult-image")
 
 
 
+//   // var newGame = new Game(); 
 
-
-var newGame = []
-// ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
-
-
-// var game = addEventListener('click', chooseGame)
-var classic = addEventListener('click', chooseClassic)
-var difficult = addEventListener('click', chooseDifficult)
-var changeGmBtn = addEventListener('click', backToHome)
-
-
-// ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
-
-  function chooseClassic(){
-    newGame === classic
-    changeGmBt.classList.remove('hidden')
-    classic.classList.add('hidden')
-    difficult.classList.add('hidden')
-        //  hide(classic);
-        //  hide(difficult);
-        //  show(changeGmBtn);
-        return `classic game` 
-
-    }
-
-   function chooseDifficult(){
-     newGame === difficult
-      changeGmBt.classList.remove('hidden')
-      classic.classList.add('hidden')
-      difficult.classList.add('hidden')
-    //   hide(classic);
-    //   hide(difficult);
-    //   show(changeGmBtn);
-      return `difficult game`
-};
-
-    function backToHome(){
-
-    }
-
-    function hideCharacters() {
-    
-    };
+// // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
 
 
 
-// console.log(show)
+//   midContainer.addEventListener('click', chooseGame)
+//   changeGmBtn.addEventListener('click', backToHome)
+
+
+// // ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
+
+//   function chooseGame(){
+//     var classic = document.querySelector("#classicGame")
+//     var difficult = document.querySelector("#difficultGame")
+//     if (classic) {
+//       hide(gameContainer);
+//       show(changeGmBtn);
+//       show(classicImg);
+//    } if (difficult) {
+//        hide(gameContainer);
+//        show(changeGmBtn);
+//        show(classicImg);
+//        show(difficultImg);
+//     } 
+//   };
+
+
+//     function backToHome(){
+//       show(gameContainer);
+//       hide(classicImg);
+//       hide(difficultImg);
+//       hide(changeGmBtn);
+
+//     }
+
+  
+
+// // ~~~~~~~~~~~~~~~~~Utility Functions~~~~~~~~~~~~~~//
+
+
 // function show(element) {
 //   element.classList.remove('hidden')
 // };
@@ -62,13 +62,12 @@ var changeGmBtn = addEventListener('click', backToHome)
 //   element.classList.add('hidden')
 // };
 
-// ~~~~~~~~~~~~~~~~~Randomizer~~~~~~~~~~~~~~//
 
-// function genCharacters() {
-//     var characters = "";
-//     var combos = 
-//     for (var i = 0; i < 6; i++) {
-//         characters += combos.charAt(Math.floor(Math.random() * combos.length));
-//     };
-//     return `${characters} ${characters}`
-//   };
+// // function genCharacters() {
+// //     var characters = "";
+// //     var combos = 
+// //     for (var i = 0; i < 6; i++) {
+// //         characters += combos.charAt(Math.floor(Math.random() * combos.length));
+// //     };
+// //     return `${characters} ${characters}`
+// //   };
