@@ -7,34 +7,41 @@ class Player {
      this.turn = ``;
       //  this.id = Date.now();
       
-    };
-    
+    }
+
+
+    introduceSelf() {
+      console.log(`Hi! I'm ${this.name}`);
+    }
+
     takeTurn(warrior){
       this.turn = warrior;
-      
+      console.log(warrior, '1')
     };
+   
 
    chooseGame(gameType){
-      // console.log(warriors, 1)
+      console.log(warriors, 1)
        if (gameType === 'classic'){
         var warriors = ['alien', 'human', 'space-ship']
-        this.turn = warriors[Math.floor(Math.random() * warriors.length)];   
+      //   this.turn = warriors[Math.floor(Math.random() * warriors.length)];  
+        console.log(gameType) 
      } else {
         var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot']
-        this.turn = warriors[Math.floor(Math.random() * warriors.length)];
-     }
-        
-         
-    };
+      
+     }   
+     this.turn = warriors[Math.floor(Math.random() * warriors.length)];
+    }
+
+    
 
 };
 
-console.log(`hello`)
 
-//  token = {
-//    var player1: ,
-//      computer: <img class="player-image" id="computer" src="./assets/SVG/computer.svg"> ,
-//  }
+
+console.log(`hello`);
+
+
 
 
 
