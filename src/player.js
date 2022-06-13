@@ -4,41 +4,61 @@ class Player {
      this.name = name;
      this.token = token;
      this.wins = 0;
-     this.turn = null;
+     this.turn = ``;
       //  this.id = Date.now();
       
-    };
-    
-    takeTurn(warrior){
-      this.turn = warrior;
-      
-    };
+    }
 
-   chooseGame(gameType){
-      console.log(warriors.length)
-       if (gameType === `classic`){
-        var warriors = [`Alien`, `Human`, `Space Ship`]
+    
+    introduceSelf() {
+      console.log(`Hi! I'm ${this.name}`);
+    }
+
+   
+   
+
+   takeTurn(gameType){
+       if (gameType === 'classic'){
+        var warriors = ['alien', 'human', 'space-ship']
+        newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];  
+        console.log(newGame.computer.turn, 2) 
      } else {
-        var warriors = [`Alien`, `Human`, `Space Ship`, `Sphinx`, `Robot`]
-     }
-        this.turn = warriors[Math.floor(Math.random() * this.warriors.length)];
-         
-    };
+        var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot'] 
+        newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];
+        console.log(newGame.computer.turn, 3) 
+     }   
+    
+    }
+
+    
 
 };
 
-console.log(`hello`)
 
-//  token = {
-//    var player1: ,
-//      computer: <img class="player-image" id="computer" src="./assets/SVG/computer.svg"> ,
-//  }
+
+console.log(`hello`);
 
 
 
+
+// takeTurn(gameType){
+//   console.log(warriors, 1)
+//    if (gameType === 'classic'){
+//     var warriors = ['alien', 'human', 'space-ship']
+//     this.turn = warriors[Math.floor(Math.random() * warriors.length)];  
+//     console.log(gameType) 
+//  } else {
+//     var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot'] 
+//     this.turn = warriors[Math.floor(Math.random() * warriors.length)];
+//     console.log(gameType) 
+//  }   
+
+// }
 
 
 // What I need to do: I need to choose a game classic or difficult
+// start with classic
+// weave in difficult later
 // Then the players appear on the next screen
 // each player has a score- "wins:" Default to 0
 // Player must choose a 'warrior'
