@@ -294,10 +294,14 @@
 
 
 
-  .result-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: inherit;
+  .result-container img{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    /* flex-shrink: inherit; */
+     width: 25%;
+     height: 25%;
+     border: 2px solid blue;
   }
  
 /*~~~~~~~~~~~~~~~~~~Hidden Class~~~~~~~~~~~~~~~~~~~~ */

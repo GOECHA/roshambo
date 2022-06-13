@@ -9,28 +9,25 @@ class Player {
       
     }
 
-
+    
     introduceSelf() {
       console.log(`Hi! I'm ${this.name}`);
     }
 
-    takeTurn(warrior){
-      this.turn = warrior;
-      console.log(warrior, '1')
-    };
+   
    
 
-   chooseGame(gameType){
-      console.log(warriors, 1)
+   takeTurn(gameType){
        if (gameType === 'classic'){
         var warriors = ['alien', 'human', 'space-ship']
-      //   this.turn = warriors[Math.floor(Math.random() * warriors.length)];  
-        console.log(gameType) 
+        newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];  
+        console.log(newGame.computer.turn, 2) 
      } else {
-        var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot']
-      
+        var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot'] 
+        newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];
+        console.log(newGame.computer.turn, 3) 
      }   
-     this.turn = warriors[Math.floor(Math.random() * warriors.length)];
+    
     }
 
     
@@ -44,7 +41,19 @@ console.log(`hello`);
 
 
 
+// takeTurn(gameType){
+//   console.log(warriors, 1)
+//    if (gameType === 'classic'){
+//     var warriors = ['alien', 'human', 'space-ship']
+//     this.turn = warriors[Math.floor(Math.random() * warriors.length)];  
+//     console.log(gameType) 
+//  } else {
+//     var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot'] 
+//     this.turn = warriors[Math.floor(Math.random() * warriors.length)];
+//     console.log(gameType) 
+//  }   
 
+// }
 
 
 // What I need to do: I need to choose a game classic or difficult
