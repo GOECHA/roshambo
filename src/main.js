@@ -6,21 +6,20 @@
   var resultContainer = document.querySelector(".result-container")
   var cenContainer = document.querySelector(".centerContainer");
   var gameContainer = document.querySelector(".game-container");
-  var classic = document.querySelector("#classicGame")
-  var difficult = document.querySelector("#difficultGame")
   var changeGmBtn = document.querySelector(".change-game-btn");
   var classicImg = document.querySelector(".classic-image");
   var difficultImg = document.querySelector(".difficult-image");
-  var classic = document.querySelector("#classicGame");
-  var difficult = document.querySelector("#difficultGame");
+  var fightBox = document.querySelector(".fight")
+  var classic = document.querySelector("#classicGame")
+  var difficult = document.querySelector("#difficultGame")
   
 
 
 //   var newGame = new Game(); 
 
 // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
- 
-  gameContainer.addEventListener('click', chooseGame);
+  difficult.addEventListener('click', chooseDifficult);
+  gameContainer.addEventListener('click', chooseClassic);
   changeGmBtn.addEventListener('click', backToHome);
   window.addEventListener('load', newGame); 
   resultContainer.addEventListener('click', chooseFighter);
@@ -32,21 +31,53 @@
     newGame = new Game();
   }
 
+   
 
-
-  function chooseGame(event){
-    if ("classicGame" === event.target.id) {
+  function chooseClassic(){    
       hide(gameContainer);
+      hide(difficult);
       show(changeGmBtn);
       show(resultContainer);
-   } else if ("difficultGame" === event.target.id) {
+
+  }
+
+    function chooseDifficult(){
        hide(gameContainer);
        show(changeGmBtn);
        show(resultContainer); 
+       console.log(`difficultGame`)
+       startGame();
     } 
-  };
+  
+    function chooseFighter(event){  
+      newGame.player.turn = event.target.id 
+      console.log(newGame.player.turn)  
+      startGame();
+    }
+  
+  function roshambo(){
+    console.log(`hello`)
+    hide(resultContainer)
+    hide(gameContainer)
+    fightBox.innerHTML = `<img id="${newGame.player.turn}" src="./assets/SVG/${newGame.player.turn}.svg">
+     <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`
+ }
 
+  function resetGame(){
+    show(resultContainer)
+    fightBox.innerHTML = ``
 
+ }
+//  console.log(`hello`)
+//      if (classic){
+//      hide(resultContainer)
+//      show(classicImg)
+//     } else if (difficult){
+//      hide(resultContainer)
+//      show(classicImg)
+//      show(difficultImg)
+//     }
+//   }
 
     function backToHome(){
       hide(changeGmBtn);
@@ -56,16 +87,14 @@
     };
 
     
-  function chooseFighter(event){  
-    newGame.player.turn = event.target.id 
-    console.log(newGame.player.turn)  
-    startGame();
-  }
   
   function startGame(){ 
-    newGame.computer.takeTurn()
-    newGame.gameRules()
-    newGame.increaseWins()
+    newGame.computer.takeTurn();
+    newGame.tieGame();
+    newGame.gameRules();
+    newGame.increaseWins();
+    roshambo();
+    setTimeout(resetGame, 2500);
   }
 
    
@@ -84,12 +113,5 @@ function hide(element) {
   element.classList.add('hidden')
 };
 
-console.log(`hello`)
-// function genCharacters() {
-//     var characters = "";
-//     var combos = 
-//     for (var i = 0; i < 6; i++) {
-//         characters += combos.charAt(Math.floor(Math.random() * combos.length));
-//     };
-//     return `${characters} ${characters}`
-//   };
+
+
