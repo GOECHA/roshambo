@@ -59,7 +59,8 @@
     filter: drop-shadow(2px 10px 5px #ffffff);
   }
 
-  p {
+  p,
+  .pageIntro {
     text-align: center;
     font-stretch: ultra-expanded;
     color: #AEFE73;
@@ -138,9 +139,34 @@
   height:50%;
 }
 
-#human{
-  height:30%;
+#space-ship{
+width: 40%;
 }
+
+#sphynx{
+  height: 50%;
+}
+
+#human{
+  height: 60%;
+}
+
+.result-container img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: center;
+  height: 40%;
+  border: 2px solid blue;
+} 
+
+
+.fight img{
+ width: 70%;
+ height: 50%;
+ margin: 0%;
+}
+
 
 /*~~~~~~~~~~~~~~~~~~Layout~~~~~~~~~~~~~~~~~~~~ */
   .main-container{
@@ -155,6 +181,7 @@
   .center-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 60%;
   height: 100%;
   /* border: 2px solid greenyellow; */
@@ -183,7 +210,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     height: 60%;
     width: 100%;
     /* border: 2px solid greenyellow; */
@@ -287,23 +313,38 @@
     /* border: 2px solid blue; */
   }
  
-  #classicGame{
+  #classicGame {
     justify-content: space-between;
   }
 
-
-
-
-  .result-container img{
-    /* display: flex;
+  .fight {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap; */
-    /* flex-shrink: inherit; */
-     width: 25%;
-     height: 25%;
-     border: 2px solid blue;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    color:#39FF14;
+    border: 2px solid blue;
   }
- 
+
+
+
+.result-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000000;
+    width: 44%;
+    height: 60%;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+
+
 /*~~~~~~~~~~~~~~~~~~Hidden Class~~~~~~~~~~~~~~~~~~~~ */
 
 .hidden{

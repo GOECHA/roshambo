@@ -5,11 +5,13 @@ class Player {
      this.token = token;
      this.wins = 0;
      this.turn = ``;
+
       //  this.id = Date.now();
       
     }
-
     
+ 
+
     introduceSelf() {
       console.log(`Hi! I'm ${this.name}`);
     }
@@ -19,11 +21,11 @@ class Player {
 
    takeTurn(gameType){
        if (gameType === 'classic'){
-        var warriors = ['alien', 'human', 'space-ship']
+        var warriors = ['alien-head', 'human', 'space-ship']
         newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];  
         console.log(newGame.computer.turn, 2) 
      } else {
-        var warriors = ['alien', 'human', 'space-ship', 'sphinx', 'robot'] 
+        var warriors = ['alien-head', 'human', 'space-ship', 'sphynx', 'robot'] 
         newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];
         console.log(newGame.computer.turn, 3) 
      }   
