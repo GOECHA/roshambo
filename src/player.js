@@ -4,30 +4,22 @@ class Player {
      this.name = name;
      this.token = token;
      this.wins = 0;
-     this.turn = ``;
-
-      //  this.id = Date.now();
-      
+     this.turn = ``;    
     }
     
- 
 
     introduceSelf() {
       console.log(`Hi! I'm ${this.name}`);
     }
 
-   
-   
 
    takeTurn(gameType){
-       if (gameType === 'classic'){
+       if (newGame.gameType === "classic"){
         var warriors = ['alien-head', 'human', 'space-ship']
         newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];  
-        console.log(newGame.computer.turn, 2) 
-     } else {
+     } else if (newGame.gameType === "difficult"){
         var warriors = ['alien-head', 'human', 'space-ship', 'sphynx', 'robot'] 
         newGame.computer.turn = warriors[Math.floor(Math.random() * warriors.length)];
-        console.log(newGame.computer.turn, 3) 
      }   
     
     }
