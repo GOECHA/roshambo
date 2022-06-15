@@ -71,6 +71,7 @@ function roshambo() {
   humPoint.innerText = `WINS: ${newGame.player.wins}`;
   comPoint.innerText = `WINS: ${newGame.computer.wins}`;
   pageIntro.innerText = `${newGame.winner['name']} WON!`
+  pageIntro.InnerText = `${newGame.winner['wins']}`
   };
 
 function resetGame() {
