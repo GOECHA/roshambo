@@ -90,10 +90,10 @@ function resetGame() {
 function backToHome() {
   pageIntro.innerText = "CHOOSE YOUR CHALLENGE!"
   hide(changeGmBtn);
+  hide(resultContainer);
   hide(fightBox);
   hide(classicImg);
   hide(difficultImg);
-  hide(resultContainer);
   show(gameContainer);
   show(difficult);
 };

@@ -34,7 +34,7 @@
     color: #ffffff;
     margin: 0%;
     padding-top: 2.5%;
-    font-size: 450%;
+    font-size: 175%;
     text-transform: capitalize; 
     filter: drop-shadow(2px 10px 5px #AEFE73);
   }
@@ -49,7 +49,7 @@
     color: #AEFE73;
     margin: 0%;
     padding-top: 1.5%;
-    font-size: 450%;
+    font-size: 150%;
     text-transform: capitalize; 
     filter: drop-shadow(2px 10px 5px #ffffff);
   }
@@ -61,7 +61,7 @@
     text-align: center;
     font-stretch: ultra-expanded;
     color: #AEFE73;
-    font-size: 400%;
+    font-size: 75%;
     font-style: bold;
     text-transform: capitalize; 
     margin: 0%;
@@ -76,9 +76,10 @@
     text-align: center;
     font-stretch: ultra-expanded;
     color: white;
-    font-size: 325%;
+    font-size: 85%;
     font-weight: 500;
-    padding-top: .5%;
+    padding-top: 1.5%;
+    padding-bottom: 30%;
     text-transform: capitalize; 
     filter: drop-shadow(2px 10px 5px #AEFE73);
   }
@@ -88,14 +89,14 @@
     text-align: center;
     font-stretch: ultra-expanded;
     color: #AEFE73;
-    font-size: 150%;
+    font-size: 40%;
     text-transform: capitalize; 
     margin: 0%;
     padding: 1%;
     filter: drop-shadow(2px 10px 5px #ffffff);
   }
  
-  .charcter-name{
+  .character-name{
     color: #AEFE73;
     font-size: 100%;
     filter: drop-shadow(2px 10px 4px #AEFE73);
@@ -103,7 +104,7 @@
 
   .win-count{
     color: #ffffff;
-    font-size: 160%;
+    font-size: 120%;
     filter: drop-shadow(2px 10px 4px #AEFE73);
   }
   
@@ -114,22 +115,21 @@
   background-color: black; 
   border: none;
   color: white;
-  padding: 15px 50px;
   width: 50%;
-  height: 7%;
+  height: 10%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin-top: 20%;
-  font-size: 20px;
-  filter: drop-shadow(2px 10px 4px #AEFE73);
+  font-size: 12px;
+  filter: drop-shadow(1px 2px 1px #AEFE73);
   cursor: pointer;
 }
 .change-game-btn:hover {
   background-color: #cdfdc0;
   color: black;
   display: inline-block;
-  filter: drop-shadow(2px 10px 4px white);
+  filter: drop-shadow(1px 2px 1px white);
 }
 
 .change-game-btn:active {
@@ -137,24 +137,15 @@
   border: none;
   color: white;
   display: inline-block;
-  filter: drop-shadow(2px 10px 4px black, rebeccapurple);
+  filter: drop-shadow(1px 2px 1px black, rebeccapurple);
 } 
 
 
 /*~~~~~~~~~~~~~~~~~~Images~~~~~~~~~~~~~~~~~~~~ */
 
-.character{
-  height: 100%;
-  width: 100%;
-}
-
-
-#space-ship{
-width: 50%;
-}
 
 #computer{
-  margin-bottom: 90%;
+  margin-bottom: 10%;
   height: 40%;
 }
 
@@ -164,14 +155,14 @@ width: 50%;
 
 #humanPlayer{
  height: 60%;
- margin-bottom: 50%;
+ margin-bottom: 5%;
 }
 
 .result-container img {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap; 
-  height: 40%;
+  height: 50%;
   width:30%
 } 
 
@@ -195,7 +186,7 @@ width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 40%;
   height: 100%;
   }
 
@@ -211,7 +202,7 @@ width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60%;
+    height: 25%;
     width: 100%;
   }
    
@@ -266,6 +257,7 @@ width: 50%;
     width: 60%;
     height: 40%;
     margin-bottom: 10%;
+    padding-top: 10px;
     filter: drop-shadow(2px 10px 5px #AEFE73);
     cursor: pointer;
   }
@@ -286,14 +278,15 @@ width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     width: 100%;
-    height: 40%;
-    padding-top: 15px;
+    height: 30%;
+    padding-top: 5px;
   }
 
   #diffTitle{
     padding-top: 5px;
-    padding-bottom: 20px;  
+    padding-bottom: 10px;  
   }
 
   .game-description{
@@ -328,6 +321,7 @@ width: 50%;
     justify-content: space-evenly;
     width:  80%;
     height: 60%;
+    padding-top: 50px;
     cursor: pointer;
 }
 
