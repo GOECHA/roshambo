@@ -1,14 +1,15 @@
 class Game {
   constructor(gameType, winner) {
     this.player = new Player(
-      `Human`, `<img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">`
+      `HUMAN`, `<img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">`
     );
     this.computer = new Player(
-      `Computer`, `<img class="player-image" id="computer" src="./assets/SVG/computer.svg">`
+      `COMPUTER`, `<img class="player-image" id="computer" src="./assets/SVG/computer.svg">`
     );
     this.gameType = ``;
     this.winner = ``;
   }
+
 
   chooseClass() {
     this.gameType = "classic";
@@ -60,17 +61,15 @@ class Game {
       return (this.winner = this.player);
     } else if (this.player.turn === "robot" && this.computer.turn === "human") {
       return (this.winner = this.player);
+    } else if (this.player.turn === this.computer.turn) {
+      console.log(`MATCH`); 
+      return (this.winner = `MATCH`);
     } else {
       return (this.winner = this.computer);
     }
   }
 
-  tieGame() {
-    if (this.player.turn === this.computer.turn) {
-      console.log(`MATCH`);
-      return (this.winner = ``);
-    }
-  }
+
 
   increaseWins() {
     if (this.winner === this.player) {
@@ -80,4 +79,7 @@ class Game {
       this.computer.wins++;
     }
   }
+
+ 
+
 }

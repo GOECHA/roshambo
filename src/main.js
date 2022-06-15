@@ -68,11 +68,17 @@ function roshambo() {
   show(fightBox);
   fightBox.innerHTML = `<img id="${newGame.player.turn}" src="./assets/SVG/${newGame.player.turn}.svg">
      <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`;
-  humPoint.innerText = `WINS: ${newGame.player.wins}`;
-  comPoint.innerText = `WINS: ${newGame.computer.wins}`;
-  pageIntro.innerText = `${newGame.winner['name']} WON!`
-  pageIntro.InnerText = `${newGame.winner['wins']}`
+    if (newGame.winner === newGame.player){
+      pageIntro.innerText = `${newGame.player.name} WON!`;
+  } else if (newGame.winner === newGame.computer){ 
+      pageIntro.innerText = `${newGame.computer.name} WON!`;
+  } else {
+    pageIntro.innerText = `MATCH DRAW!`;
+  }
+    humPoint.innerText = `WINS: ${newGame.player.wins}`;
+    comPoint.innerText = `WINS: ${newGame.computer.wins}`;
   };
+
 
 function resetGame() {
   hide(fightBox);
@@ -84,21 +90,17 @@ function resetGame() {
 function backToHome() {
   pageIntro.innerText = "CHOOSE YOUR CHALLENGE!"
   hide(changeGmBtn);
+  hide(resultContainer);
   hide(fightBox);
   hide(classicImg);
   hide(difficultImg);
-  hide(resultContainer);
   show(gameContainer);
   show(difficult);
-  show(homeTitle)
-  hide(computerWon)
-  hide(humanWon)
 };
 
 function startGame() {
   newGame.computer.takeTurn();
   newGame.gameRules();
-  newGame.tieGame();
   newGame.increaseWins();
   roshambo();
   setTimeout(resetGame, 2250);
