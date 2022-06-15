@@ -77,9 +77,10 @@
     font-stretch: ultra-expanded;
     color: white;
     font-size: 325%;
+    font-weight: 500;
     padding-top: .5%;
     text-transform: capitalize; 
-    filter: drop-shadow(2px 10px 5px #ffffff);
+    filter: drop-shadow(2px 10px 5px #AEFE73);
   }
 
 
