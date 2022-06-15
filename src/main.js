@@ -12,10 +12,7 @@ var classic = document.querySelector("#classicGame");
 var difficult = document.querySelector("#difficultGame");
 var comPoint = document.querySelector("#computerWin");
 var humPoint = document.querySelector("#humanWin");
-var homeTitle = document.querySelector("#h321");
-var fightTitle = document.querySelector("#h322");
-var humanWon = document.querySelector("#h323");
-var compWon = document.querySelector("#h324");
+var pageIntro = document.querySelector(".page-intro");
 
 
 // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
@@ -33,6 +30,10 @@ changeGmBtn.addEventListener("click", backToHome);
 
 function newGame() {
   newGame = new Game();
+};
+
+function newPlayer() {
+  newPlayer = new Player();
 }
 
 function chooseClassic() {
@@ -41,7 +42,8 @@ function chooseClassic() {
   show(changeGmBtn);
   show(resultContainer);
   newGame.chooseClass();
-}
+  pageIntro.innerText = "CHOOSE YOUR WARRIOR!"
+};
 
 function chooseDifficult() {
   hide(gameContainer);
@@ -50,15 +52,13 @@ function chooseDifficult() {
   show(resultContainer);
   show(difficultImg);
   newGame.chooseDiff();
-  console.log(`difficultGame`);
-}
+  pageIntro.innerText = "CHOOSE YOUR WARRIOR!"
+};
 
 function chooseFighter(event) {
   newGame.player.turn = event.target.id;
-  console.log(newGame.player.turn);
-  console.log(newGame.computer.turn);
   startGame();
-}
+};
 
 // ~~~~~~~~~~~~~~~~~Game Functions~~~~~~~~~~~~~~//
 
@@ -70,15 +70,18 @@ function roshambo() {
      <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`;
   humPoint.innerText = `WINS: ${newGame.player.wins}`;
   comPoint.innerText = `WINS: ${newGame.computer.wins}`;
-}
+  pageIntro.innerText = `${newGame.winner['name']} WON!`
+  };
 
 function resetGame() {
   hide(fightBox);
   show(resultContainer);
   fightBox.innerHTML = ``;
-}
+  pageIntro.innerText = "CHOOSE YOUR WARRIOR!"
+};
 
 function backToHome() {
+  pageIntro.innerText = "CHOOSE YOUR CHALLENGE!"
   hide(changeGmBtn);
   hide(fightBox);
   hide(classicImg);
@@ -89,7 +92,7 @@ function backToHome() {
   show(homeTitle)
   hide(computerWon)
   hide(humanWon)
-}
+};
 
 function startGame() {
   newGame.computer.takeTurn();
@@ -97,16 +100,16 @@ function startGame() {
   newGame.tieGame();
   newGame.increaseWins();
   roshambo();
-  setTimeout(resetGame, 2500);
-}
+  setTimeout(resetGame, 2250);
+};
 
 
 // ~~~~~~~~~~~~~~~~~Utility Functions~~~~~~~~~~~~~~//
 
 function show(element) {
   element.classList.remove("hidden");
-}
+};
 
 function hide(element) {
   element.classList.add("hidden");
-}
+};

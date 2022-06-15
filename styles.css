@@ -154,7 +154,7 @@ width: 50%;
 
 #computer{
   margin-bottom: 90%;
-  height: 30%;
+  height: 40%;
 }
 
 #human{
@@ -162,8 +162,8 @@ width: 50%;
 }
 
 #humanPlayer{
- height: 50%;
- margin-bottom: 70%;
+ height: 60%;
+ margin-bottom: 50%;
 }
 
 .result-container img {
