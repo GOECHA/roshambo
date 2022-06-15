@@ -77,9 +77,10 @@
     font-stretch: ultra-expanded;
     color: white;
     font-size: 325%;
+    font-weight: 500;
     padding-top: .5%;
     text-transform: capitalize; 
-    filter: drop-shadow(2px 10px 5px #ffffff);
+    filter: drop-shadow(2px 10px 5px #AEFE73);
   }
 
 
@@ -154,7 +155,7 @@ width: 50%;
 
 #computer{
   margin-bottom: 90%;
-  height: 30%;
+  height: 40%;
 }
 
 #human{
@@ -162,8 +163,8 @@ width: 50%;
 }
 
 #humanPlayer{
- height: 50%;
- margin-bottom: 70%;
+ height: 60%;
+ margin-bottom: 50%;
 }
 
 .result-container img {
