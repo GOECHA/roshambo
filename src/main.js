@@ -1,117 +1,112 @@
-
-
 // ~~~~~~~~~~~~~~~~Global Variables~~~~~~~~~~~~~~//
-  newGame;
+newGame;
 
-  var resultContainer = document.querySelector(".result-container")
-  var cenContainer = document.querySelector(".centerContainer");
-  var gameContainer = document.querySelector(".game-container");
-  var changeGmBtn = document.querySelector(".change-game-btn");
-  var classicImg = document.querySelector(".classic-image");
-  var difficultImg = document.querySelector(".difficult-image");
-  var fightBox = document.querySelector(".fight")
-  var classic = document.querySelector("#classicGame")
-  var difficult = document.querySelector("#difficultGame")
-  
+var resultContainer = document.querySelector(".result-container");
+var cenContainer = document.querySelector(".centerContainer");
+var gameContainer = document.querySelector(".game-container");
+var changeGmBtn = document.querySelector(".change-game-btn");
+var classicImg = document.querySelector(".classic-image");
+var difficultImg = document.querySelector(".difficult-image-container");
+var fightBox = document.querySelector(".fight");
+var classic = document.querySelector("#classicGame");
+var difficult = document.querySelector("#difficultGame");
+var comPoint = document.querySelector("#computerWin");
+var humPoint = document.querySelector("#humanWin");
+var homeTitle = document.querySelector("#h321");
+var fightTitle = document.querySelector("#h322");
+var humanWon = document.querySelector("#h323");
+var compWon = document.querySelector("#h324");
 
-
-//   var newGame = new Game(); 
 
 // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
-  difficult.addEventListener('click', chooseDifficult);
-  gameContainer.addEventListener('click', chooseClassic);
-  changeGmBtn.addEventListener('click', backToHome);
-  window.addEventListener('load', newGame); 
-  resultContainer.addEventListener('click', chooseFighter);
+
+
+
+window.addEventListener("load", newGame);
+gameContainer.addEventListener("click", chooseClassic);
+difficult.addEventListener("click", chooseDifficult);
+resultContainer.addEventListener("click", chooseFighter);
+changeGmBtn.addEventListener("click", backToHome);
+
 
 // ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
 
+function newGame() {
+  newGame = new Game();
+}
 
-  function newGame(){
-    newGame = new Game();
-  }
+function chooseClassic() {
+  hide(gameContainer);
+  hide(difficult);
+  show(changeGmBtn);
+  show(resultContainer);
+  newGame.chooseClass();
+}
 
-   
+function chooseDifficult() {
+  hide(gameContainer);
+  hide(difficult);
+  show(changeGmBtn);
+  show(resultContainer);
+  show(difficultImg);
+  newGame.chooseDiff();
+  console.log(`difficultGame`);
+}
 
-  function chooseClassic(){    
-      hide(gameContainer);
-      hide(difficult);
-      show(changeGmBtn);
-      show(resultContainer);
+function chooseFighter(event) {
+  newGame.player.turn = event.target.id;
+  console.log(newGame.player.turn);
+  console.log(newGame.computer.turn);
+  startGame();
+}
 
-  }
+// ~~~~~~~~~~~~~~~~~Game Functions~~~~~~~~~~~~~~//
 
-    function chooseDifficult(){
-       hide(gameContainer);
-       show(changeGmBtn);
-       show(resultContainer); 
-       console.log(`difficultGame`)
-       startGame();
-    } 
-  
-    function chooseFighter(event){  
-      newGame.player.turn = event.target.id 
-      console.log(newGame.player.turn)  
-      startGame();
-    }
-  
-  function roshambo(){
-    console.log(`hello`)
-    hide(resultContainer)
-    hide(gameContainer)
-    fightBox.innerHTML = `<img id="${newGame.player.turn}" src="./assets/SVG/${newGame.player.turn}.svg">
-     <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`
- }
+function roshambo() {
+  hide(resultContainer);
+  hide(gameContainer);
+  show(fightBox);
+  fightBox.innerHTML = `<img id="${newGame.player.turn}" src="./assets/SVG/${newGame.player.turn}.svg">
+     <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`;
+  humPoint.innerText = `WINS: ${newGame.player.wins}`;
+  comPoint.innerText = `WINS: ${newGame.computer.wins}`;
+}
 
-  function resetGame(){
-    show(resultContainer)
-    fightBox.innerHTML = ``
+function resetGame() {
+  hide(fightBox);
+  show(resultContainer);
+  fightBox.innerHTML = ``;
+}
 
- }
-//  console.log(`hello`)
-//      if (classic){
-//      hide(resultContainer)
-//      show(classicImg)
-//     } else if (difficult){
-//      hide(resultContainer)
-//      show(classicImg)
-//      show(difficultImg)
-//     }
-//   }
+function backToHome() {
+  hide(changeGmBtn);
+  hide(fightBox);
+  hide(classicImg);
+  hide(difficultImg);
+  hide(resultContainer);
+  show(gameContainer);
+  show(difficult);
+  show(homeTitle)
+  hide(computerWon)
+  hide(humanWon)
+}
 
-    function backToHome(){
-      hide(changeGmBtn);
-      show(gameContainer);
-      hide(classicImg);
-      hide(difficultImg);
-    };
+function startGame() {
+  newGame.computer.takeTurn();
+  newGame.gameRules();
+  newGame.tieGame();
+  newGame.increaseWins();
+  roshambo();
+  setTimeout(resetGame, 2500);
+}
 
-    
-  
-  function startGame(){ 
-    newGame.computer.takeTurn();
-    newGame.tieGame();
-    newGame.gameRules();
-    newGame.increaseWins();
-    roshambo();
-    setTimeout(resetGame, 2500);
-  }
 
-   
-
-    // var id = id.event.target
 // ~~~~~~~~~~~~~~~~~Utility Functions~~~~~~~~~~~~~~//
 
-
-
-
 function show(element) {
-  element.classList.remove('hidden')
-};
+  element.classList.remove("hidden");
+}
 
 function hide(element) {
-  element.classList.add('hidden')
-};
-
-
-
+  element.classList.add("hidden");
+}

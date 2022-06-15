@@ -14,8 +14,8 @@
         <aside class="left-side"> 
           <article class="side-boxes" id="leftTop">
             <img class="player-image" id="humanPlayer" src="./assets/SVG/human2.svg">
-            <div class="character-name">HUMAN</div>
-            <p class="win-count" id="humanWin">Wins: 0</p>
+            <p class="character-name">HUMAN</p>
+            <p class="win-count" id="humanWin"></p>
           </article>
           <article class="side-boxes" id="leftMid">
             <button class="change-game-btn hidden">Change Game</button>
@@ -25,12 +25,7 @@
           <article class="mid-boxes" id="midTop">
              <h1>ANCIENT ALIEN</h1>
              <h2>ROSHAMBO</h2> 
-             <div class="pageIntro">
-               <h3>CHOOSE YOUR CHALLENGE</h3>
-               <h3 hidden>CHOOSE YOUR FIGHTER</h3>
-               <h3 hidden>HUMAN WON!</h3>
-               <h3 hidden>COMPUTER WON!</h3>
-             </div>    
+             <h3 class="page-intro" id="h321">CHOOSE YOUR CHALLENGE</h3>   
           </article>
           <article class="mid-boxes" id="midMid"> 
             <div class="game-container" id="classicGame">
@@ -41,41 +36,36 @@
                 <p class="p2">Space Ship > Human</p>
               </div>
              </div>
-          </article> 
-          
-          <article class="mid-boxes" id="midBtm">
             <div class="game-container" id="difficultGame">
               <p class="game-title" id="diffTitle">Difficult</p>     
               <div class="game-description" id="diffDescrip">
-                <p class="p2">Alien > Space Ship & Sphinx</p>
+                <p class="p2">Alien > Space Ship & Sphynx</p>
                 <p class="p2">Human > Alien & Robot</p>
-                <p class="p2">Space Ship > Human & Sphinx</p>
-                <p class="p2">Sphinx > Alien & Human</p>
+                <p class="p2">Space Ship > Human & Sphynx</p>
+                <p class="p2">Sphynx > Space Ship & Robot</p>
                 <p class="p2">Robot > Human & Alien</p>
               </div>
             </div>
+            <article class="fight hidden" id="fightBox"></article>            
+            <article class="result-container hidden">     
+                <img class="classic-image" id="human" src="./assets/SVG/human.svg">
+                <img class="classic-image" id="space-ship" src="./assets/SVG/space-ship.svg">
+                <img class="classic-image" id="alien-head" src="./assets/SVG/alien-head.svg">
+              <div class="difficult-image-container hidden">
+                <img class="difficult-image" id="robot" src="./assets/SVG/robot.svg">
+                <img class="difficult-image"id="sphynx" src="./assets/SVG/sphynx.svg">
+              </div>
             </article> 
-            <article class="fight" id="fight-box"></article>            
-            <article class="result-container hidden">
-             <img class="classic-image" id="space-ship" src="./assets/SVG/space-ship.svg">
-             <img class="classic-image" id="human" src="./assets/SVG/human.svg">
-             <img class="classic-image" id="alien-head" src="./assets/SVG/alien-head.svg">
-             <div class="difficult-image hidden">
-             <img class="difficult-image" id="robot" src="./assets/SVG/robot.svg">
-             <img class="difficult-image"id="sphynx" src="./assets/SVG/sphynx.svg">
-             </div>
             </article>
-            <article class="mid-boxes" id="midFoot"></article>
         </section>
-        <!-- <img class="abduction hidden" src="./assets/SVG/abduction.svg"> -->
-            <section class="right-side"> 
+            <aside class="right-side"> 
              <article class="side-boxes" id="rightTop">
               <img class="player-image" id="computer" src="./assets/SVG/computer.svg">
-              <div class="character-name">COMPUTER</div>     
-              <p class="win-count" id="computerWin">Wins: 0</p>
+              <p class="character-name">COMPUTER</p>     
+              <p class="win-count" id="computerWin"></p>
             </article>
             <article class="side-boxes" id="rightMid"></article>
-            </section>          
+          </aside>          
       </section>
      </main>
      <script type="text/javascript" src="./src/main.js"></script>
@@ -83,3 +73,5 @@
      <script type="text/javascript" src="./src/player.js"></script>
 </body>
 </html>
+
+
