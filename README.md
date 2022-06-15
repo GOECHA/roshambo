@@ -5,7 +5,8 @@ A game of rock, paper, scissors
 
 ### *Contents*
 
-![Watch Demo](https://user-images.githubusercontent.com/102189342/173721268-c2fbb4ec-4c41-47b8-9c76-3ba7856502bc.mov)
+**Watch Demo**
+https://user-images.githubusercontent.com/102189342/173723066-6b56220f-31dd-4050-86be-28227517a34f.mov
 
 
 ## Objective
