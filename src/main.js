@@ -66,6 +66,7 @@ function roshambo() {
   hide(resultContainer);
   hide(gameContainer);
   show(fightBox);
+  hide(changeGmBtn);
   fightBox.innerHTML = `<img id="${newGame.player.turn}" src="./assets/SVG/${newGame.player.turn}.svg">
      <img id="${newGame.computer.turn}" src="./assets/SVG/${newGame.computer.turn}.svg">`;
     if (newGame.winner === newGame.player){
@@ -83,6 +84,7 @@ function roshambo() {
 function resetGame() {
   hide(fightBox);
   show(resultContainer);
+  show(changeGmBtn);
   fightBox.innerHTML = ``;
   pageIntro.innerText = "CHOOSE YOUR WARRIOR!"
 };
