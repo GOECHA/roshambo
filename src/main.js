@@ -12,6 +12,10 @@ var classic = document.querySelector("#classicGame");
 var difficult = document.querySelector("#difficultGame");
 var comPoint = document.querySelector("#computerWin");
 var humPoint = document.querySelector("#humanWin");
+var homeTitle = document.querySelector("#h321");
+var fightTitle = document.querySelector("#h322");
+var humanWon = document.querySelector("#h323");
+var compWon = document.querySelector("#h324");
 
 
 // ~~~~~~~~~~~~~~~~~Event Listeners~~~~~~~~~~~~~~//
@@ -23,6 +27,8 @@ gameContainer.addEventListener("click", chooseClassic);
 difficult.addEventListener("click", chooseDifficult);
 resultContainer.addEventListener("click", chooseFighter);
 changeGmBtn.addEventListener("click", backToHome);
+
+
 // ~~~~~~~~~~~~~~~~~Event Handlers~~~~~~~~~~~~~~//
 
 function newGame() {
@@ -54,6 +60,8 @@ function chooseFighter(event) {
   startGame();
 }
 
+// ~~~~~~~~~~~~~~~~~Game Functions~~~~~~~~~~~~~~//
+
 function roshambo() {
   hide(resultContainer);
   hide(gameContainer);
@@ -78,6 +86,9 @@ function backToHome() {
   hide(resultContainer);
   show(gameContainer);
   show(difficult);
+  show(homeTitle)
+  hide(computerWon)
+  hide(humanWon)
 }
 
 function startGame() {
