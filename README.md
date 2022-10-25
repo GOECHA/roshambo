@@ -1,6 +1,6 @@
 # roshambo
 A game of rock, paper, scissors
-# RomCom
+
 #### 6.14.22
 
 ### *Contents*
