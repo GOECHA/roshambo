@@ -6,7 +6,7 @@ A game of rock, paper, scissors
 ### *Contents*
 
 **Watch Demo**
-https://user-images.githubusercontent.com/102189342/173723066-6b56220f-31dd-4050-86be-28227517a34f.mov
+<img width="400" alt='' src='https://user-images.githubusercontent.com/102189342/173723066-6b56220f-31dd-4050-86be-28227517a34f.mov' />
 
 
 ## Objective
