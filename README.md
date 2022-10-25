@@ -6,7 +6,12 @@ A game of rock, paper, scissors
 ### *Contents*
 
 **Watch Demo**
-<img width="400" alt='' src='https://user-images.githubusercontent.com/102189342/173723066-6b56220f-31dd-4050-86be-28227517a34f.mov' />
+<img width="400" alt="" src="https://user-images.githubusercontent.com/102189342/197897330-f2a32f85-09c5-4847-890e-48e75ade6e5b.mov" />
+
+
+<img width="400" alt="Screen Shot 2022-10-25 at 4 59 24 PM" src="https://user-images.githubusercontent.com/102189342/197897774-cc043752-0cc4-4d77-a38f-b44af7d26545.png">
+
+
 
 
 ## Objective
